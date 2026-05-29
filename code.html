@@ -1,0 +1,833 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Trupti Pathade | Software Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#dae2fd",
+              background: "#faf8ff",
+              "on-primary-fixed": "#00174b",
+              "on-surface-variant": "#434655",
+              "secondary-container": "#d5e4f8",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#b9c8db",
+              "on-primary-fixed-variant": "#003ea8",
+              "on-error": "#ffffff",
+              "surface-container": "#eaedff",
+              "surface-bright": "#faf8ff",
+              "secondary-fixed": "#d5e4f8",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#c3c6d7",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#191c1e",
+              "surface-container-low": "#f2f3ff",
+              "surface-tint": "#0053db",
+              "on-tertiary": "#ffffff",
+              "primary-fixed": "#dbe1ff",
+              "error-container": "#ffdad6",
+              outline: "#737686",
+              "on-surface": "#131b2e",
+              "on-secondary-fixed-variant": "#3a4858",
+              "inverse-primary": "#b4c5ff",
+              secondary: "#516070",
+              primary: "#004ac6",
+              error: "#ba1a1a",
+              "surface-container-highest": "#dae2fd",
+              surface: "#faf8ff",
+              "surface-dim": "#d2d9f4",
+              "on-secondary-fixed": "#0e1d2b",
+              "tertiary-container": "#6b6e70",
+              "on-tertiary-container": "#eff1f3",
+              tertiary: "#525657",
+              "on-secondary-container": "#576676",
+              "inverse-surface": "#283044",
+              "surface-container-high": "#e2e7ff",
+              "on-tertiary-fixed-variant": "#444749",
+              "tertiary-fixed-dim": "#c4c7c9",
+              "primary-fixed-dim": "#b4c5ff",
+              "primary-container": "#2563eb",
+              "tertiary-fixed": "#e0e3e5",
+              "on-primary-container": "#eeefff",
+              "on-background": "#131b2e",
+              "inverse-on-surface": "#eef0ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "stack-md": "16px",
+              "margin-mobile": "20px",
+              "section-padding": "80px",
+              gutter: "24px",
+              "stack-sm": "8px",
+              "stack-lg": "32px",
+              "container-max": "1120px",
+            },
+            fontFamily: {
+              "display-lg": ["Manrope"],
+              "headline-lg": ["Manrope"],
+              "label-sm": ["JetBrains Mono"],
+              "body-md": ["Manrope"],
+              "headline-lg-mobile": ["Manrope"],
+              "body-lg": ["Manrope"],
+              "headline-md": ["Manrope"],
+            },
+            fontSize: {
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+              "label-sm": ["13px", { lineHeight: "1.0", fontWeight: "500" }],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "1.2", fontWeight: "700" },
+              ],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-md": [
+                "20px",
+                {
+                  lineHeight: "1.4",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+      .experience-timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #d5e4f8;
+      }
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-md text-body-md overflow-x-hidden"
+  >
+    <!-- TopAppBar -->
+    <header
+      class="fixed top-0 w-full z-[100] bg-background/80 backdrop-blur-md border-b border-outline-variant/30"
+    >
+      <nav
+        class="max-w-container-max mx-auto px-gutter py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="material-symbols-outlined text-primary"
+            data-icon="terminal"
+            >terminal</span
+          >
+          <span
+            class="font-headline-md text-headline-md font-bold tracking-tight text-on-background"
+            >TRUPTI PATHADE</span
+          >
+        </div>
+        <div class="hidden md:flex gap-stack-lg">
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors"
+            href="#experience"
+            >Experience</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors"
+            href="#education"
+            >Education</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors"
+            href="#achievements"
+            >Achievements</a
+          >
+        </div>
+        <a
+          class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:bg-primary/90 transition-all active:scale-95"
+          href="Trupti_Pathade_Resume.pdf" target="_blank"
+          >Resume</a
+        >
+      </nav>
+    </header>
+
+    <main class="pt-24">
+      <!-- Hero Section -->
+      <section
+        class="max-w-container-max mx-auto px-gutter py-section-padding flex flex-col md:flex-row items-center gap-16"
+      >
+        <div class="flex-1 space-y-stack-lg">
+          <div class="space-y-4">
+            <span
+              class="font-label-sm text-label-sm text-primary tracking-widest"
+              >SOFTWARE ENGINEER</span
+            >
+            <h1 class="font-display-lg text-display-lg max-w-2xl">
+              Building Secure, Data-Driven Web Experiences.
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant max-w-xl"
+            >
+              Final-year BTech Computer Engineering student with hands-on
+              experience in full-stack development. Passionate about
+              finance-tech and creating scalable, user-centric software
+              solutions.
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <a
+              class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold hover:shadow-lg transition-all"
+              href="#contact"
+              >Get in Touch</a
+            >
+            <div class="flex items-center gap-4 px-4">
+              <a
+                class="text-secondary hover:text-primary transition-colors"
+                href="https://github.com/trupti101101"
+                ><span class="material-symbols-outlined" data-icon="code"
+                  >code</span
+                ></a
+              >
+              <a
+                class="text-secondary hover:text-primary transition-colors"
+                href="https://linkedin.com/in/trupti-pathade13"
+                ><span class="material-symbols-outlined" data-icon="link"
+                  >link</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience Section -->
+      <section
+        class="bg-surface-container-low py-section-padding"
+        id="experience"
+      >
+        <div class="max-w-container-max mx-auto px-gutter">
+          <div class="mb-stack-lg">
+            <h2 class="font-headline-lg text-headline-lg">Experience</h2>
+            <div class="w-12 h-1 bg-primary mt-2"></div>
+          </div>
+          <div class="relative pl-8 experience-timeline space-y-12">
+            <!-- Junior Dev -->
+            <div class="relative group">
+              <div
+                class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-background group-hover:scale-125 transition-transform"
+              ></div>
+              <div class="grid md:grid-cols-[1fr_3fr] gap-8">
+                <div>
+                  <span class="font-label-sm text-label-sm text-primary"
+                    >OCT 2025 - JAN 2026</span
+                  >
+                </div>
+                <div>
+                  <h3 class="font-headline-md text-headline-md">
+                    Junior Software Developer
+                  </h3>
+                  <p class="text-secondary font-medium">
+                    ThinkQuotient S/W Pvt. Ltd | Pune, Maharashtra
+                  </p>
+                  <p class="mt-4 text-on-surface-variant">
+                    Spearheading feature development for enterprise-level
+                    applications, ensuring code quality and high performance
+                    through rigorous testing and documentation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Data Science -->
+            <div class="relative group">
+              <div
+                class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-outline border-4 border-background group-hover:bg-primary transition-colors"
+              ></div>
+              <div class="grid md:grid-cols-[1fr_3fr] gap-8">
+                <div>
+                  <span class="font-label-sm text-label-sm text-secondary"
+                    >DEC 2024 - JAN 2025</span
+                  >
+                </div>
+                <div>
+                  <h3 class="font-headline-md text-headline-md">
+                    Data Science &amp; ML Intern
+                  </h3>
+                  <p class="text-secondary font-medium">
+                    Softcrowd Technologies | In-Campus
+                  </p>
+                  <div class="flex gap-2 mt-2">
+                    <span
+                      class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded font-label-sm text-label-sm"
+                      >PYTHON</span
+                    >
+                    <span
+                      class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded font-label-sm text-label-sm"
+                      >ML</span
+                    >
+                    <span
+                      class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded font-label-sm text-label-sm"
+                      >SCIKIT-LEARN</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Web Dev -->
+            <div class="relative group">
+              <div
+                class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-outline border-4 border-background group-hover:bg-primary transition-colors"
+              ></div>
+              <div class="grid md:grid-cols-[1fr_3fr] gap-8">
+                <div>
+                  <span class="font-label-sm text-label-sm text-secondary"
+                    >MAR 2024 - APR 2024</span
+                  >
+                </div>
+                <div>
+                  <h3 class="font-headline-md text-headline-md">
+                    Web Development Intern
+                  </h3>
+                  <p class="text-secondary font-medium">
+                    Bharat Intern | Remote
+                  </p>
+                  <div class="flex gap-2 mt-2">
+                    <span
+                      class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded font-label-sm text-label-sm"
+                      >HTML</span
+                    >
+                    <span
+                      class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded font-label-sm text-label-sm"
+                      >CSS</span
+                    >
+                    <span
+                      class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded font-label-sm text-label-sm"
+                      >JAVASCRIPT</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section (Bento Grid) -->
+      <section class="py-section-padding" id="projects">
+        <div class="max-w-container-max mx-auto px-gutter">
+          <div class="mb-stack-lg">
+            <h2 class="font-headline-lg text-headline-lg">Selected Projects</h2>
+            <div class="w-12 h-1 bg-primary mt-2"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <!-- Project 1: Gmail Service -->
+            <div
+              class="md:col-span-8 bg-surface-container-lowest border border-outline-variant p-8 rounded-xl hover:shadow-xl transition-all group overflow-hidden relative"
+            >
+              <div class="relative z-10">
+                <span
+                  class="font-label-sm text-label-sm text-primary mb-2 block"
+                  >AUTOMATION &amp; APIS</span
+                >
+                <h3 class="font-headline-lg text-headline-lg mb-4">
+                  Dynamic Gmail Notification Service
+                </h3>
+                <p class="text-on-surface-variant max-w-lg mb-6">
+                  A real-time notification system designed to fetch and display
+                  incoming emails dynamically using advanced automation
+                  protocols and secure API integrations.
+                </p>
+                <div class="flex gap-4">
+                  <a
+                    class="inline-flex items-center gap-2 text-primary font-bold"
+                    href="#"
+                    >View Case Study
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="arrow_forward"
+                      >arrow_forward</span
+                    ></a
+                  >
+                </div>
+              </div>
+              <div
+                class="absolute -right-16 -bottom-16 w-80 h-80 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"
+              ></div>
+            </div>
+            <!-- Project 2: Pixel Art Game -->
+            <div
+              class="md:col-span-4 bg-primary text-on-primary p-8 rounded-xl flex flex-col justify-between"
+            >
+              <div>
+                <span class="font-label-sm text-label-sm opacity-80 mb-2 block"
+                  >GAME DEV</span
+                >
+                <h3 class="font-headline-md text-headline-md mb-2">
+                  Chronicals of JIT
+                </h3>
+                <p class="text-on-primary/80">
+                  A 2D pixel art game with smooth gameplay mechanics and
+                  optimized performance.
+                </p>
+              </div>
+              <div class="mt-8 flex justify-end">
+                <span
+                  class="material-symbols-outlined text-4xl"
+                  data-icon="videogame_asset"
+                  >videogame_asset</span
+                >
+              </div>
+            </div>
+            <!-- Project 3: Weather Website -->
+            <div
+              class="md:col-span-4 bg-surface-container p-8 rounded-xl border border-outline-variant/30 flex flex-col"
+            >
+              <span
+                class="material-symbols-outlined text-primary text-3xl mb-4"
+                data-icon="wb_sunny"
+                >wb_sunny</span
+              >
+              <h3 class="font-headline-md text-headline-md mb-2">
+                Weather Website
+              </h3>
+              <p class="text-on-surface-variant flex-grow">
+                Responsive web application displaying real-time weather data
+                using external API synchronization.
+              </p>
+            </div>
+            <!-- Project 4: Tool-Tip -->
+            <div
+              class="md:col-span-8 bg-surface-container-high p-8 rounded-xl border border-outline-variant/30 flex flex-col md:flex-row items-center gap-8"
+            >
+              <div class="flex-1">
+                <h3 class="font-headline-md text-headline-md mb-2">
+                  Tool-Tip | Utility Tool
+                </h3>
+                <p class="text-on-surface-variant">
+                  All-in-one utility offering unit conversion, math
+                  calculations, task management, and precise time tracking to
+                  streamline professional workflows.
+                </p>
+              </div>
+              <div
+                class="flex flex-wrap gap-2 justify-center md:justify-start w-full md:w-auto"
+              >
+                <span
+                  class="bg-background px-4 py-2 rounded-full font-label-sm text-label-sm border border-outline-variant"
+                  >EFFICIENCY</span
+                >
+                <span
+                  class="bg-background px-4 py-2 rounded-full font-label-sm text-label-sm border border-outline-variant"
+                  >PRODUCTIVITY</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Education & Certificates -->
+      <section
+        class="bg-surface-container-lowest py-section-padding border-y border-outline-variant/20"
+        id="education"
+      >
+        <div
+          class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-16"
+        >
+          <!-- Education -->
+          <div>
+            <div class="mb-stack-lg">
+              <h2 class="font-headline-lg text-headline-lg">Education</h2>
+              <div class="w-12 h-1 bg-primary mt-2"></div>
+            </div>
+            <div class="space-y-8">
+              <div class="border-l-4 border-primary pl-6 py-2">
+                <h3 class="font-headline-md text-headline-md">
+                  BTech in Computer Engineering
+                </h3>
+                <p class="text-secondary font-medium">
+                  Jawahar Education Society, ITMR, Nashik
+                </p>
+                <div
+                  class="flex justify-between mt-2 font-label-sm text-label-sm text-on-surface-variant"
+                >
+                  <span>CGPA: 9.29</span>
+                  <span>2022 - 2026</span>
+                </div>
+              </div>
+              <div class="border-l-4 border-outline-variant pl-6 py-2">
+                <h3 class="font-headline-md text-headline-md">
+                  Higher Secondary Certificate
+                </h3>
+                <div
+                  class="flex justify-between mt-1 font-label-sm text-label-sm text-on-surface-variant"
+                >
+                  <span>Grade: 82.83%</span>
+                  <span>2021 - 2022</span>
+                </div>
+              </div>
+              <div class="border-l-4 border-outline-variant pl-6 py-2">
+                <h3 class="font-headline-md text-headline-md">
+                  Senior Secondary Certificate
+                </h3>
+                <div
+                  class="flex justify-between mt-1 font-label-sm text-label-sm text-on-surface-variant"
+                >
+                  <span>Grade: 88.80%</span>
+                  <span>2019 - 2020</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Certificates -->
+          <div>
+            <div class="mb-stack-lg">
+              <h2 class="font-headline-lg text-headline-lg">Certifications</h2>
+              <div class="w-12 h-1 bg-primary mt-2"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div
+                class="bg-surface-container-low p-4 rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="verified"
+                  >verified</span
+                >
+                <span class="text-body-md font-medium"
+                  >ISRO - LiDAR Data Processing</span
+                >
+              </div>
+              <div
+                class="bg-surface-container-low p-4 rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="verified"
+                  >verified</span
+                >
+                <span class="text-body-md font-medium"
+                  >NPTEL IIT Kharagpur - DBMS</span
+                >
+              </div>
+              <div
+                class="bg-surface-container-low p-4 rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="verified"
+                  >verified</span
+                >
+                <span class="text-body-md font-medium"
+                  >Tech Workshop JIT - Security</span
+                >
+              </div>
+              <div
+                class="bg-surface-container-low p-4 rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="verified"
+                  >verified</span
+                >
+                <span class="text-body-md font-medium"
+                  >AWS - Bedrock Getting Started</span
+                >
+              </div>
+              <div
+                class="bg-surface-container-low p-4 rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="verified"
+                  >verified</span
+                >
+                <span class="text-body-md font-medium"
+                  >Great Learning - AWS Services</span
+                >
+              </div>
+              <div
+                class="bg-surface-container-low p-4 rounded-lg flex items-start gap-3"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="verified"
+                  >verified</span
+                >
+                <span class="text-body-md font-medium"
+                  >AIF &amp; Dell - Future Workspace</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Achievements -->
+      <section class="py-section-padding" id="achievements">
+        <div class="max-w-container-max mx-auto px-gutter">
+          <div class="mb-stack-lg">
+            <h2 class="font-headline-lg text-headline-lg text-center">
+              Notable Achievements
+            </h2>
+            <div class="w-12 h-1 bg-primary mt-2 mx-auto"></div>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="p-8 border border-outline-variant rounded-xl hover:border-primary transition-colors text-center"
+            >
+              <div
+                class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <span
+                  class="material-symbols-outlined text-on-primary-container text-3xl"
+                  data-icon="article"
+                  >article</span
+                >
+              </div>
+              <h3 class="font-headline-md text-headline-md mb-4">
+                Research Publication
+              </h3>
+              <p class="text-on-surface-variant">
+                Published a Research Paper in journal IJTE Special Issue (Vol
+                48) on "Stockpile: A Multi-tier Inventory Management System".
+              </p>
+            </div>
+            <div
+              class="p-8 border border-outline-variant rounded-xl hover:border-primary transition-colors text-center"
+            >
+              <div
+                class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <span
+                  class="material-symbols-outlined text-on-secondary-container text-3xl"
+                  data-icon="emoji_events"
+                  >emoji_events</span
+                >
+              </div>
+              <h3 class="font-headline-md text-headline-md mb-4">
+                Google Arcade Milestone
+              </h3>
+              <p class="text-on-surface-variant">
+                Achieved Champion &amp; Topper milestones in Google Arcade
+                2024-2025 with multiple accolades from Google.
+              </p>
+            </div>
+            <div
+              class="p-8 border border-outline-variant rounded-xl hover:border-primary transition-colors text-center"
+            >
+              <div
+                class="w-16 h-16 bg-tertiary-fixed-dim rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <span
+                  class="material-symbols-outlined text-on-tertiary-fixed-variant text-3xl"
+                  data-icon="sports_tennis"
+                  >sports_tennis</span
+                >
+              </div>
+              <h3 class="font-headline-md text-headline-md mb-4">
+                District Level Sports
+              </h3>
+              <p class="text-on-surface-variant">
+                Represented at district level for Table Tennis, securing 3
+                trophies from 1st, 2nd, and 3rd year levels.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section
+        class="py-section-padding bg-inverse-surface text-inverse-on-surface"
+        id="contact"
+      >
+        <div class="max-w-container-max mx-auto px-gutter">
+          <div class="grid md:grid-cols-1 gap-16 items-center">
+            <div>
+              <h2 class="font-display-lg text-display-lg mb-6">
+                Let's build something exceptional.
+              </h2>
+              <p class="text-lg opacity-80 mb-12">
+                I'm currently seeking opportunities for 2026 graduation. Whether
+                you have a question or just want to say hi, my inbox is open.
+              </p>
+              <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                  <span
+                    class="material-symbols-outlined text-primary-fixed"
+                    data-icon="mail"
+                    >mail</span
+                  >
+                  <span class="font-headline-md">truptiwork13@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <span
+                    class="material-symbols-outlined text-primary-fixed"
+                    data-icon="call"
+                    >call</span
+                  >
+                  <span class="font-headline-md">+91 7719919002</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <span
+                    class="material-symbols-outlined text-primary-fixed"
+                    data-icon="location_on"
+                    >location_on</span
+                  >
+                  <span class="font-headline-md">Nashik, Maharashtra</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full py-section-padding bg-surface-container-lowest border-t border-outline-variant/20"
+    >
+      <div
+        class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md"
+      >
+        <div>
+          <span
+            class="font-headline-md text-headline-md font-bold text-on-surface"
+            >TRUPTI PATHADE</span
+          >
+          <p
+            class="text-secondary font-label-sm text-label-sm mt-1 uppercase tracking-widest"
+          >
+            © 2024 Built with Engineering Precision.
+          </p>
+        </div>
+        <div class="flex gap-stack-lg">
+          <a
+            class="text-secondary hover:text-primary transition-colors font-label-sm text-label-sm"
+            href="https://linkedin.com"
+            >LinkedIn</a
+          >
+          <a
+            class="text-secondary hover:text-primary transition-colors font-label-sm text-label-sm"
+            href="https://github.com"
+            >GitHub</a
+          >
+          <a
+            class="text-secondary hover:text-primary transition-colors font-label-sm text-label-sm"
+            href="mailto:truptiwork13@gmail.com"
+            >Email</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Simple scroll Reveal effect
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-8");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section").forEach((section) => {
+        section.classList.add(
+          "transition-all",
+          "duration-700",
+          "opacity-0",
+          "translate-y-8",
+        );
+        observer.observe(section);
+      });
+
+      // Navigation active state logic
+      window.addEventListener("scroll", () => {
+        const sections = [
+          "experience",
+          "projects",
+          "education",
+          "achievements",
+        ];
+        let current = "";
+
+        sections.forEach((section) => {
+          const element = document.getElementById(section);
+          const sectionTop = element.offsetTop;
+          if (pageYOffset >= sectionTop - 100) {
+            current = section;
+          }
+        });
+
+        document.querySelectorAll("nav a").forEach((a) => {
+          a.classList.remove(
+            "text-primary",
+            "font-bold",
+            "border-b-2",
+            "border-primary",
+            "pb-1",
+          );
+          if (a.getAttribute("href") === `#${current}`) {
+            a.classList.add(
+              "text-primary",
+              "font-bold",
+              "border-b-2",
+              "border-primary",
+              "pb-1",
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
